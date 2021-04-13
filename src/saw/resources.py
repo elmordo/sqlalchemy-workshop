@@ -1,7 +1,7 @@
 from flask import Blueprint
 from flask_restful import Api, Resource
 
-bp = Blueprint()
+bp = Blueprint("blueprint", __name__)
 api = Api(bp)
 
 
