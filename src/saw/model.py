@@ -11,6 +11,7 @@ def generate_random_color():
 
 class TaskGroup(Base):
     __tablename__ = "task_groups"
+    __fillable__ = ["name", "comment", "color"]
 
     id = Column(Integer(), primary_key=True, autoincrement=True, nullable=False)
     name = Column(Text(), nullable=False)
@@ -21,6 +22,7 @@ class TaskGroup(Base):
 
 class Task(Base):
     __tablename__ = "tasks"
+    __fillable__ = ["name", "comment", "completed_at"]
 
     id = Column(Integer(), primary_key=True, autoincrement=True, nullable=False)
     task_group_id = Column(Integer(), ForeignKey(TaskGroup.id, ondelete="CASCADE"))
