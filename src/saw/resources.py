@@ -16,32 +16,38 @@ class TaskGroups(Resource):
 
 class TaskGroup(Resource):
 
-    def get(self, id_):
+    def get(self, group_id):
         pass
 
-    def put(self, id_):
+    def put(self, group_id):
         pass
 
-    def delete(self, id_):
+    def delete(self, group_id):
         pass
 
 
 class Tasks(Resource):
 
-    def get(self):
+    def get(self, group_id):
         pass
 
-    def post(self):
+    def post(self, group_id):
         pass
 
 
 class Task(Resource):
 
-    def get(self, id_):
+    def get(self, group_id, task_id):
         pass
 
-    def put(self, id_):
+    def put(self, group_id, task_id):
         pass
 
-    def delete(self, id_):
+    def delete(self, group_id, task_id):
         pass
+
+
+api.add_resource(TaskGroups, "/")
+api.add_resource(TaskGroup, "/<int:group_id>")
+api.add_resource(Tasks, "/<int:group_id>/task")
+api.add_resource(Task, "/<int:group_id>/task/<int:task_id>")
