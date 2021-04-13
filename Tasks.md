@@ -16,6 +16,7 @@ Jaká budou data?
 *Task*
 
 * id
+* task_group_id
 * name
 * comment
 * created_at

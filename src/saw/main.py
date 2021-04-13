@@ -1,5 +1,5 @@
 from saw.application import Application
-# import saw.model
+import saw.model
 from saw.database import make_engine, prepare_database
 from saw.resources import bp
 from sqlalchemy.orm import sessionmaker
